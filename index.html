@@ -13,108 +13,104 @@
         }
 
         body {
-            font-family: 'Helvetica Neue', sans-serif;
-            background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #fff;
             background-attachment: fixed;
+            color: #333;
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 50px;
+            background-color: white;
+            padding: 40px;
             border-radius: 20px;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
-            max-width: 500px;
+            max-width: 450px;
             width: 100%;
-            animation: fadeIn 1s ease-out;
+            animation: popUp 0.5s ease-in-out;
+        }
+
+        @keyframes popUp {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         h1 {
-            font-size: 40px;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-            font-weight: bold;
-            text-transform: uppercase;
-            background: linear-gradient(90deg, #ffd700, #ffb700);
+            font-size: 36px;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #ff6a00, #ee0979);
             -webkit-background-clip: text;
             color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         p {
-            font-size: 18px;
-            color: #ddd;
+            font-size: 16px;
+            color: #555;
             margin-bottom: 20px;
         }
 
         .payment-info {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            margin-top: 20px;
+            background: linear-gradient(90deg, #84fab0, #8fd3f4);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .payment-info p {
-            margin: 10px 0;
+            margin: 8px 0;
             font-size: 18px;
-            color: #ffd700;
+            color: #fff;
+            font-weight: bold;
         }
 
         .account-number {
-            font-size: 24px;
-            font-weight: bold;
-            color: #fff;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            font-size: 22px;
         }
 
         .button {
             display: inline-block;
-            margin-top: 30px;
-            padding: 15px 40px;
-            background: linear-gradient(90deg, #ffb700, #ffd700);
-            color: #000;
+            padding: 15px 30px;
+            background: linear-gradient(90deg, #ff512f, #dd2476);
+            color: white;
             font-weight: bold;
             text-transform: uppercase;
             border-radius: 30px;
             text-decoration: none;
-            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.6);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 16px;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            margin-top: 10px;
         }
 
         .button:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.8);
+            box-shadow: 0 8px 20px rgba(255, 81, 47, 0.6);
         }
 
         footer {
             margin-top: 30px;
             font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+            color: #888;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>VIP Website Hết Hạn</h1>
-        <p>Website VIP của bạn đã hết hạn. Vui lòng thanh toán ngay để tiếp tục sử dụng các dịch vụ cao cấp.</p>
+        <h1>Website Hết Hạn</h1>
+        <p>Website của bạn đã hết hạn. Vui lòng thanh toán để tiếp tục sử dụng.</p>
         <div class="payment-info">
             <p>Số tài khoản: <span class="account-number">9704229203528138715</span></p>
             <p>Chủ tài khoản: DOAN ANH MINH</p>
@@ -124,7 +120,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 VIP Website của bạn. All rights reserved.</p>
+        <p>&copy; 2024 Website của bạn. All rights reserved.</p>
     </footer>
 </body>
 
